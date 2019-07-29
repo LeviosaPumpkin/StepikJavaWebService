@@ -1,5 +1,7 @@
 package main;
 
+import java.util.logging.Logger;
+
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -23,6 +25,7 @@ public class Main {
         server.setHandler(context);
 
         server.start();
+        Logger.getGlobal().info("Server started");
         server.join();
     }
 }
